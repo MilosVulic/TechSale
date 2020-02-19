@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".items.ItemListActivity"
+    android:padding="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Spinner
+            android:id="@+id/spinnerItemFilter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/itemTypes"/>
+
+        <TextView
+            android:id="@+id/textViewFilterMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0 items match your search"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickGoToCart"
+                android:text="@string/cart" />
+
+            <Button
+                android:id="@+id/buttonPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickGoToOrder"
+                android:text="@string/payment" />
+
+            <Button
+                android:id="@+id/buttonEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickEmptyCart"
+                android:text="@string/empty_cart" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
