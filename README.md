@@ -1,2 +1,2 @@
 # TechSale
-Online tech shop back-end part for an android application
+Online tech shop back-end part (Spring Boot 2.0) for an android application
